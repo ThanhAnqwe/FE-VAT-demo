@@ -25,9 +25,6 @@ const emit = defineEmits(['expand-node'])
 const graphContainer = ref(null)
 let network = null
 
-// ============================================
-// Bảng màu theo label
-// ============================================
 const LABEL_COLORS = {
   Company: { background: '#4C8EDA', border: '#2C5C9E', highlight: { background: '#6BA5EE', border: '#2C5C9E' } },
   Person: { background: '#F79767', border: '#C0562F', highlight: { background: '#FFAE7F', border: '#C0562F' } },
@@ -35,9 +32,7 @@ const LABEL_COLORS = {
   default: { background: '#A5ABB6', border: '#7C828E', highlight: { background: '#C4C9D1', border: '#7C828E' } }
 }
 
-// ============================================
 // Radial layout: tâm -> cấp 1 (vòng tròn đều) -> cấp 2 (tỏa theo hướng cha)
-// ============================================
 function buildRadialLayout(centerNodeId, allNodes, allEdges) {
   const RADIUS_LEVEL_1 = 200
   const RADIUS_LEVEL_2 = 380
@@ -116,9 +111,7 @@ function buildTooltip(item) {
   return container
 }
 
-// ============================================
 // Build dữ liệu cho vis-network
-// ============================================
 function buildVisData(graphData, centerNodeId) {
   const nodesRaw = centerNodeId
     ? buildRadialLayout(centerNodeId, graphData.nodes, graphData.edges)
@@ -160,9 +153,7 @@ function buildVisData(graphData, centerNodeId) {
   return { nodes, edges }
 }
 
-// ============================================
 // Render / re-render graph
-// ============================================
 function renderGraph() {
   if (!graphContainer.value) return
 
@@ -172,7 +163,7 @@ function renderGraph() {
 
   const options = {
     physics: {
-      enabled: !usingFixedLayout, // tắt hẳn physics khi đã tự tính tọa độ radial
+      enabled: !usingFixedLayout,
       solver: 'barnesHut',
       barnesHut: {
         gravitationalConstant: -8000,

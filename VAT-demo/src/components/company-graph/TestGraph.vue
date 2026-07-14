@@ -4,7 +4,7 @@
       <h2>Test Graph Viewer</h2>
       <div class="button-group">
         <button @click="activeData = 'simple'" :class="{ active: activeData === 'simple' }">
-          Dữ liệu đơn giản (11 node)
+          Dữ liệu đơn giản (19 node)
         </button>
         <button @click="activeData = 'cycle'" :class="{ active: activeData === 'cycle' }">
           Có Person + vòng lặp sở hữu
@@ -12,6 +12,10 @@
       </div>
     </div>
 
+    <!-- 
+        thêm center-node-id="4:66de2c65-89b2-4785-9fe0-eb4054663298:0" để mặc định node là trung tâm
+        sau query bằng company được chọn
+    -->
     <GraphNode :graph-data="currentGraphData" @expand-node="handleExpandNode" />
   </div>
 </template>
