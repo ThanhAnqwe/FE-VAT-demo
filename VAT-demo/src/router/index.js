@@ -1,8 +1,13 @@
 import { createWebHistory, createRouter } from "vue-router";
+import Test from '../components/test.vue'
+import TestGraph from '../components/company-graph/TestGraph.vue'
 
-export const router = createRouter({
+const router = createRouter({
     history: createWebHistory(),
-    router: [
-        
+    routes: [
+        { path: "/", name: 'home', component: Test},
+        { path: "/test", name: 'test', component: TestGraph}
     ]
 })
+
+export default router;
