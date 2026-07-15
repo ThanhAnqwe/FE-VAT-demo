@@ -1,16 +1,18 @@
-<script setup></script>
-
 <template>
-  <header v-if="true">
-    <nav>
-      <RouterLink to="/">Home</RouterLink> |
-      <RouterLink to="/test">Test Graph</RouterLink>
-    </nav>
-  </header>
-
-  <main>
+  <MainLayout class="app">
     <RouterView />
-  </main>
+  </MainLayout>
 </template>
 
-<style scoped></style>
+<script setup>
+import MainLayout from './layouts/MainLayout.vue';
+
+</script>
+
+
+
+<style scoped>
+.app{
+  padding: var(--space-6);
+}
+</style>

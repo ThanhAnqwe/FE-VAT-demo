@@ -1,0 +1,15 @@
+.icon_send {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  -webkit-mask-image: url('../icons/send-message.svg');
+  mask-image: url('../icons/send-message.svg');
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: var(--color-text-black);
+  transition: background-color var(--transition-fast);
+}
