@@ -45,7 +45,6 @@
   border-radius: var(--radius-md);
   padding: var(--space-4);
   min-height: 400px;
-  z-index: 1;
 }
 
 .mockup-card__title {

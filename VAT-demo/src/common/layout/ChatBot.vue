@@ -16,8 +16,8 @@
     </div>
 
     <div class="suggest_tag" aria-label="Gợi ý câu hỏi">
-      <button class="suggest_tag__item">Công ty A có rủi ro không?</button>
-      <button class="suggest_tag__item">Công ty B có liên quan đến công ty C không?</button>
+      <button class="suggest_tag__item">Điểm rủi ro</button>
+      <button class="suggest_tag__item">hehe </button>
       <button class="suggest_tag__item">Công ty D có đang bị điều tra không?</button>
     </div>
 
@@ -45,7 +45,7 @@ const isBotTyping = ref(false);
 const draft = ref('');
 let nextId = 4;
 
-// demo data — thay bằng state thật từ store / API
+// mock answer data
 const messages = ref([
   {
     id: 1,
@@ -71,7 +71,6 @@ async function handleSend() {
   const question = draft.value.trim();
   if (!question || isBotTyping.value) return;
 
-  // 1. đẩy ngay câu hỏi của user lên UI (optimistic update)
   messages.value.push({
     id: nextId++,
     role: 'user',
@@ -109,7 +108,7 @@ function formatTime(date) {
   return date.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
 }
 
-// giả lập độ trễ mạng — xoá hàm này khi đã nối API thật
+
 function mockBotReply(question) {
   return new Promise((resolve) => {
     setTimeout(() => resolve(`Đã nhận câu hỏi: "${question}". (đây là câu trả lời giả lập)`), 1200);
@@ -194,14 +193,13 @@ function mockBotReply(question) {
   color: var(--input-placeholder);
 }
 
-.chatbot__input-area input:hover {
+.chatbot__input-area input:hover:not(:focus-visible) {
   border-color: var(--input-border-hover);
 }
 
 .chatbot__input-area input:focus-visible {
   outline: var(--focus-ring-width) solid var(--focus-ring-color);
   outline-offset: var(--focus-ring-offset);
-  border-color: var(--color-primary);
 }
 
 .chatbot__input-area button {

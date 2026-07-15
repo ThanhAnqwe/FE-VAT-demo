@@ -9,10 +9,8 @@ import MainLayout from './layouts/MainLayout.vue';
 
 </script>
 
-
-
 <style scoped>
 .app{
-  padding: var(--space-6);
+  padding: var(--space-4);
 }
 </style>

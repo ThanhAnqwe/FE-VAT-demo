@@ -59,7 +59,6 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-4);
-  z-index: 1;
 }
 
 .mockup-card__title {

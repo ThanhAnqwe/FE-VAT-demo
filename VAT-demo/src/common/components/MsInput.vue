@@ -42,7 +42,7 @@ defineEmits(['update:modelValue']);
   border: 1px solid var(--input-border);
   border-radius: var(--radius-sm);
   padding: var(--space-2) var(--space-3);
-  font-size: var(--text-input);
+  font-size: var(--text-sm);
   color: var(--input-text);
   transition: border-color 0.15s ease;
 }
@@ -51,7 +51,7 @@ defineEmits(['update:modelValue']);
   color: var(--input-placeholder);
 }
 
-.search-input__control:hover {
+.search-input__control:hover:not(:focus-visible) {
   border-color: var(--input-border-hover);
 }
 

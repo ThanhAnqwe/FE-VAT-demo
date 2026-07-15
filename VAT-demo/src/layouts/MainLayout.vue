@@ -2,13 +2,13 @@
   <div class="main-layout">
     <!--blur orb -->
     <div class="glow-orb"></div>
-
+    <div class="top-header">
     <PageHeader />
 
     <FilterBar />
 
     <NavBar />
-
+    </div>
     <div class="layout-body">
       <main class="main-content">
         <slot />
@@ -30,10 +30,13 @@ import ChatBot from '../common/layout/ChatBot.vue'
 
 <style scoped>
 .main-layout {
+  position: relative;   /* thêm — làm mốc định vị cho glow-orb */
+  overflow: hidden; 
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background: var(--color-bg);
+
 }
 
 .glow-orb {
@@ -50,17 +53,24 @@ import ChatBot from '../common/layout/ChatBot.vue'
   z-index: 0;
 }
 
+.top-header{
+  position: relative;
+  z-index: 1;
+}
+
 .layout-body {
+  position: relative;
   flex: 1;
   display: grid;
   grid-template-columns: 1fr 340px;
   min-height: 0;
+  z-index: 0;
 }
 
 .main-content {
   overflow-y: auto;
   min-width: 0;
-  padding: var(--space-4);
+  padding: 0 var(--space-4);
 }
 
 .chatbot-aside {
@@ -71,4 +81,5 @@ import ChatBot from '../common/layout/ChatBot.vue'
   flex-direction: column;
   min-height: 0;
 }
+
 </style>
