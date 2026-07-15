@@ -15,4 +15,13 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  server: {
+    host: '0.0.0.0',
+    port: 5173,
+    strictPort: true,
+    allowedHosts: true, // cho phép truy cập qua domain .app.github.dev
+    hmr: {
+      clientPort: 443, // vì Codespaces proxy qua https
+    },
+  },
 })

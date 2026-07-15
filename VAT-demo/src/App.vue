@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <header>
+  <header v-if="true">
     <nav>
       <RouterLink to="/">Home</RouterLink> |
       <RouterLink to="/test">Test Graph</RouterLink>

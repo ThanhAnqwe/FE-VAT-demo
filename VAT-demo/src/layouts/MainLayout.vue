@@ -1,16 +1,15 @@
 <template>
-    <div class="page-wapper">
-        <PageHeader />
+    <div class="main-layout">
+        <!--Page header-->
+        <PageHeader/>
 
-        <!--Filter bar -->
+        <!--FilterBar-->
         <FilterBar/>
 
-        <!--Navigation -->
+        <!--NavBar-->
         <NavBar/>
 
-        <!--main content-->
-        <div>
-            <slot></slot>
+        <div >
         </div>
     </div>
 </template>
