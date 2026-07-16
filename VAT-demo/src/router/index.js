@@ -2,7 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 import Test from '../views/test.vue'
 import TestGraph from '../views/company-graph/TestGraph.vue';
 import SummaryView from '../views/Summary/SummaryView.vue';
-import CompanyDetailView from '../views/DetailCompany/CompanyDetail.vue';
+import CompanyDetailView from '../views/CompanyDetail/CompanyDetail.vue';
 import NotFoundView from '../views/NotFoundView.vue';
 
 const router = createRouter({

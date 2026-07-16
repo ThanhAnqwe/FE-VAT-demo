@@ -7,7 +7,6 @@
 <script setup>
 defineProps({
   text: { type: String, required: true },
-  // 'success' | 'danger' | 'neutral'
   variant: { type: String, default: 'neutral' },
 });
 </script>
@@ -43,5 +42,29 @@ defineProps({
   color: var(--status-neutral-text);
   background: var(--status-neutral-bg);
   border-color: var(--status-neutral-border);
+}
+
+.status-badge--risk-low {
+  color: var(--risk-low-text);
+  background: var(--risk-low-bg);
+  border-color: var(--risk-low-border);
+}
+
+.status-badge--risk-medium {
+  color: var(--risk-medium-text);
+  background: var(--risk-medium-bg);
+  border-color: var(--risk-medium-border);
+}
+
+.status-badge--risk-high {
+  color: var(--risk-high-text);
+  background: var(--risk-high-bg);
+  border-color: var(--risk-high-border);
+}
+
+.status-badge--risk-critical {
+  color: var(--risk-critical-text);
+  background: var(--risk-critical-bg);
+  border-color: var(--risk-critical-border);
 }
 </style>

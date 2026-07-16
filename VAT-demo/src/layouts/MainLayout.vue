@@ -30,11 +30,11 @@ import ChatBot from '../common/layout/ChatBot.vue'
 
 <style scoped>
 .main-layout {
-  position: relative;   /* thêm — làm mốc định vị cho glow-orb */
+  position: relative;
   overflow: hidden; 
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
   background: var(--color-bg);
 
 }
